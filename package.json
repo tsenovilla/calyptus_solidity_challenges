@@ -1,0 +1,12 @@
+{
+  "name": "calyptus_solidity_challenge_270",
+  "version": "1.0.0",
+  "description": "Small hardhat project used to solve the challenge https://www.linkedin.com/posts/calyptus-web3_solidity-challenge-270-this-smart-activity-7153645436082216961-r7c9?utm_source=share&utm_medium=member_desktop",
+  "author": "Tomás Senovilla Polo",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.4"
+  }
+}
