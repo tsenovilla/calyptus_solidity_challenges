@@ -1,8 +1,16 @@
-Use this small hardhat project to solve the challenge: https://www.linkedin.com/posts/calyptus-web3_solidity-challenge-270-this-smart-activity-7153645436082216961-r7c9?utm_source=share&utm_medium=member_desktop
+Use this small hardhat project to solve the Solidity challenges proposed by Calyptus on LinkedIn https://www.linkedin.com/school/calyptus-web3/
 
 In order to run the project:
 1. Install the dependencies via `npm install`.
-2. Run `npx hardhat compile` to compile the contract and get its ABI.
-3. Create a `.env` file to hold your env variables, namely PRIVATE_KEY (the private key of the account you use to interact with the contract) and RPC_URL (the url of your node provider: Infura, Alchemy,...)
-4. Run `npx hardhat run scripts/getNumber.js --network sepolia` to get the current secret number.
-5. Modify `NEW_NUMBER` in `updateNumber.js` and run `npx hardhat run scripts/updateNumber.js --network sepolia` to change the secret number.
+1. Run `npx hardhat compile` to compile the contract and get its ABI.
+1. Create a `.env` file to hold your env variables, namely PRIVATE_KEY (the private key of the account you use to interact with the contract) and RPC_URL (the url of your node provider: Infura, Alchemy,...)
+
+
+To run the solution of challenge #270:
+1. Run `challenge270/getNumber.js` to get the current secret number.
+1. Modify `NEW_NUMBER` in `challenge270/updateNumber.js` and run the script to change the secret number.
+
+To run the solution of challenge #276:
+1. Deploy the contract by yourself using the `challenge276/deploySolution.js` script or use the one deployed by me: 0x7CEd1c55DF8771E5348ff8aE758De71dC42C993e.
+1. Set your name in the `WINNER_NAME` constant in `challenge276/enrollWinner.js` or in `challenge276/enrollWinnerImproved.js` (more gas efficient) and run the selected script.
+1. Set your address in the `BOOK_ADDRESS` constant in `challenge276/getBookOfWinnersEntry.js` and run the script to check if everything passed well.

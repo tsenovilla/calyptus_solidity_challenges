@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
-contract SimpleContract {
+contract Challenge270 {
     uint256 private secretNumber;
 
     constructor(uint256 _secretNumber){
