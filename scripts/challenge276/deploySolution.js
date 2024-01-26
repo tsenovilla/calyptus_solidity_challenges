@@ -3,6 +3,7 @@ const { ethers } = require("hardhat");
 async function main() {
     const contract = await ethers.deployContract("Solution276");
     await contract.waitForDeployment(); 
+    console.log(await contract.getAddress())
 }
 
 // We recommend this pattern to be able to use async/await everywhere
