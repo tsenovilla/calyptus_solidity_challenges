@@ -18,7 +18,7 @@ contract Solution276 {
         assembly{
             mstore(0x00, 0x222366b600000000000000000000000000000000000000000000000000000000) // bytes4(keccak256("enrollWinner(bytes4,string)") = 0x222366b6
             mstore(0x04, 0x495179ca00000000000000000000000000000000000000000000000000000000) // bytes4(keccak256("solve_puzzle()") = 0x495179ca
-            calldatacopy(0x24,0x24,0x64) // As the string comes as the second argument and the first one is an address, it starts at calldata's 0x24. It's length it's 0x60 (offset + length + string itself) so it goes til 0x64. As it's calldata, it's already ABI encoded. Eveything's stored at memory's 0x24 due to the solve_puzzle's selector ends there
+            calldatacopy(0x24,0x24,0x64) // As the string comes as the second argument and the first one is an address, it starts at calldata's 0x24. It's length it's 0x60 (offset + length + string itself) so it goes til 0x64. As the string is the second type in the calldata and it's the second argument of the function call (and in both cases the first argument is a copy type of 32 bytes), it's already well ABI encoded. Eveything's stored at memory's 0x24 due to the solve_puzzle's selector ends there
             let success := call(gas(),wizards_contract_address,0,0x00,0x84,0x0,0x0) // 0x04 + 0x20 + 0x60 = 0x84 -> Therefore the size of the memory used as input. The called function returns nothing, then the space reserved for the output is 0.
             if iszero(success){ // Revert on fail
                 revert(0,0)
